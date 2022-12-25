@@ -48,7 +48,7 @@ def get_GAN_config():
     parser.add_argument('--lr_update_step', type=int, default=1000)
 
     # For training
-    config = parser.parse_args()
+    config = parser.parse_args(args = [])
     config.mode = 'train'
     config.lambda_wgan = 0.0
     config.lambda_gp = 10.0
