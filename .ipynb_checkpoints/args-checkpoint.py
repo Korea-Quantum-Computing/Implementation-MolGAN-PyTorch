@@ -35,11 +35,11 @@ def get_GAN_config():
     parser.add_argument('--mode', type=str, default='train', choices=['train', 'test'])
 
     # Use either of these two datasets.
-    parser.add_argument('--mol_data_dir', type=str, default='./data/qm9_5k.sparsedataset')
+    parser.add_argument('--mol_data_dir', type=str, default='data/qm9_5k.sparsedataset')
     # parser.add_argument('--mol_data_dir', type=str, default='data/gdb9_9nodes.sparsedataset')
 
     # Directories.
-    parser.add_argument('--saving_dir', type=str, default='./exp_results/GAN/')
+    parser.add_argument('--saving_dir', type=str, default='../exp_results/GAN/')
 
     # Step size.
     parser.add_argument('--log_step', type=int, default=10)
@@ -95,11 +95,11 @@ def get_VAE_config():
     parser.add_argument('--mode', type=str, default='train', choices=['train', 'test'])
 
     # Use either of these two datasets.
-    parser.add_argument('--mol_data_dir', type=str, default='./data/qm9_5k.sparsedataset')
+    parser.add_argument('--mol_data_dir', type=str, default='data/qm9_5k.sparsedataset')
     # parser.add_argument('--mol_data_dir', type=str, default='data/gdb9_9nodes.sparsedataset')
 
     # Directories.
-    parser.add_argument('--saving_dir', type=str, default='./exp_results/VAE_test/')
+    parser.add_argument('--saving_dir', type=str, default='../exp_results/VAE_test/')
 
     # Step size.
     parser.add_argument('--log_step', type=int, default=10)

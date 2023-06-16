@@ -14,11 +14,12 @@ from rdkit.Chem import Draw
 
 import math
 import numpy as np
-
+import os
 from util_dir.utils_io import random_string
 
-NP_model = pickle.load(gzip.open('../data/NP_score.pkl.gz'))
-SA_model = {i[j]: float(i[0]) for i in pickle.load(gzip.open('../data/SA_score.pkl.gz')) for j in range(1, len(i))}
+print(f'Current dir = {os.getcwd()}')
+NP_model = pickle.load(gzip.open('./data/NP_score.pkl.gz'))
+SA_model = {i[j]: float(i[0]) for i in pickle.load(gzip.open('./data/SA_score.pkl.gz')) for j in range(1, len(i))}
 
 
 class MolecularMetrics(object):

@@ -16,7 +16,6 @@ from solver_gan import Solver
 from torch.backends import cudnn
 
 
-
 def main(config):
     # For fast training.
     cudnn.benchmark = True

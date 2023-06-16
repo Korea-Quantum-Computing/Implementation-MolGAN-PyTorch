@@ -13,7 +13,7 @@ from util_dir.utils_io import random_string
 from utils import *
 from models_gan import Generator, Discriminator
 from data.sparse_molecular_dataset import SparseMolecularDataset
-torch.autograd.set_detect_anomaly(True)
+
 
 class Solver(object):
     """Solver for training and testing StarGAN."""
@@ -373,13 +373,11 @@ class Solver(object):
                 if cur_step % self.n_critic == 0:
                     train_step_G.backward(retain_graph=True)
                     self.g_optimizer.step()
-        
+
                 # Optimise value network.
                 if cur_step % self.n_critic == 0:
-                    self.v_optimizer.zero_grad()
                     train_step_V.backward()
                     self.v_optimizer.step()
-                    
 
             # =================================================================================== #
             #                                 4. Miscellaneous                                    #
